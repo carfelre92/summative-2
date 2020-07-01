@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: "Raleway", sans-serif;
+}
+
+@media only screen and (max-width: 30rem) {
+  .app {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .main-welcome-container {
+    position: absolute;
+    min-height: 110vh;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#049dd9), to(#ffc107));
+    background-image: linear-gradient(#049dd9 0%, #ffc107 100%);
+    z-index: 1;
+  }
+  .main-welcome-container .main-logo-container .main-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .main-welcome-container .main-logo-container .main-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .main-welcome-container .main-text-container {
+    height: 50vh;
+    margin-top: 6rem;
+  }
+  .main-welcome-container .main-text-container .main-texts {
+    text-align: center;
+    color: white;
+    margin: 0 2rem;
+  }
+  .main-welcome-container .main-text-container .main-texts h3 {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+  }
+  .main-welcome-container .main-text-container .main-texts h4 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .main-welcome-container .main-button-container {
+    position: relative;
+    width: auto;
+  }
+  .main-welcome-container .main-button-container .main-button {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    display: inline-block;
+    background-color: white;
+    border-radius: 15rem;
+    padding: 1rem 0;
+  }
+  .main-welcome-container .main-button-container .main-button p {
+    text-align: center;
+    width: 14rem;
+    font-size: 1.7rem;
+    color: #049dd9;
+  }
+  .login-container {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    overflow: scroll;
+  }
+  .login-container .login-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .login-container .login-contents .login-logo-container .login-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .login-container .login-contents .login-logo-container .login-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .login-container .login-contents .login-contents-body {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-phone {
+    margin-top: 0.6rem;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-phone h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-phone .phone-number {
+    margin: 1rem 0;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-phone input[type="number"],
+  .login-container .login-contents .login-contents-body .sign-in-phone select {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .login-container .login-contents .login-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .login-container .login-contents .login-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .login-container .login-contents .login-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .login-container .login-contents .login-contents-body .go-to-sign-up {
+    margin: 10vh 0 10vh 0;
+  }
+  .login-container .login-contents .login-contents-body .or-line {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    overflow: hidden;
+  }
+  .login-container .login-contents .login-contents-body .or-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .login-container .login-contents .login-contents-body .or-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .login-container .login-contents .login-contents-body .or-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method {
+    position: relative;
+    line-height: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: solid #bebdbd 2px;
+    border-radius: 0.6rem;
+    margin: 1.5rem 0;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method .far {
+    font-size: 2.5rem;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method .far::before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin-left: 6px;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method .fab {
+    font-size: 2.5rem;
+  }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method .fab::before {
+    margin-left: 6px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method .fa-facebook-square::before {
+    color: black;
+    margin-left: 8px;
+  }
+  .login-container .login-contents .login-contents-body .no-account-line {
+    text-align: center;
+    overflow: hidden;
+  }
+  .login-container .login-contents .login-contents-body .no-account-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .login-container .login-contents .login-contents-body .no-account-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .login-container .login-contents .login-contents-body .no-account-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-login-container {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .phone-login-container .phone-login-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-logo-container .phone-login-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .phone-login-container .phone-login-contents .phone-login-logo-container .phone-login-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body {
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .weve-sent {
+    padding-top: 1rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .weve-sent h4 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .weve-sent h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: lighter;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3.8rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit .digit {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    border: solid #bebdbd thin;
+    margin: 0 0.25rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit .digit input {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    text-align: center;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit .one {
+    margin: 0 0.25rem 0 0;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .did-receive {
+    margin-top: 2rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .did-receive h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: lighter;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .did-receive span {
+    font-weight: bold;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .call-instead {
+    margin-top: 3.5rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .call-instead h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: bolder;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .another-method-line {
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+    overflow: hidden;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .another-method-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .another-method-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .another-method-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .back-to-login {
+    margin: 10vh 0 10vh 0;
+  }
+  .top-side {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .bottom-side {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  .current {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 100;
+  }
+  .displaynone {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,390 @@
+$main-font: "Raleway", sans-serif;
+$color-one: #049dd9;
+$color-two: #ffc107;
+$color-gray: rgb(190, 189, 189);
+$font-color: white;
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: $main-font;
+}
+
+@mixin logo-property {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        height: auto;
+        position: absolute;
+        top: -3.5rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@mixin gray-line {
+    text-align: center;
+
+    span {
+        color: $color-gray;
+        position: relative;
+        padding: 0 0.7rem;
+    }
+
+    span::before {
+        position: absolute;
+        content: "";
+        border-top: 1px solid $color-gray;
+        top: 50% !important;
+        right: 100% !important;
+        width: 500rem !important;
+    }
+
+    span::after {
+        position: absolute;
+        content: "";
+        border-top: 1px solid $color-gray;
+        margin: 0 0rem;
+        top: 50% !important;
+        left: 100% !important;
+        width: 500rem !important;
+    }
+}
+
+@mixin button-container{
+    .button-container {
+        margin: 1rem 0;
+
+        .button {
+            background-image: linear-gradient(270deg, $color-one 30.62%, white 161.07%);
+            text-align: center;
+            border-radius: 1rem;
+            padding: 1rem 0;
+
+            p {
+                color: white;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 30rem) {
+    .app {
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        //transition:all ease 1s;
+    }
+
+    .main-welcome-container {
+        //display:none;
+        //transition: ease all 1s;
+        position: absolute;
+        min-height: 110vh;
+        width: 100%;
+        background-image: linear-gradient($color-one 0%, $color-two 100%);
+        z-index: 1;
+
+        .main-logo-container {
+            .main-logo {
+                @include logo-property;
+            }
+        }
+
+        .main-text-container {
+            height: 50vh;
+            margin-top: 6rem;
+
+            .main-texts {
+                text-align: center;
+                color: $font-color;
+                margin: 0 2rem;
+
+                h3 {
+                    margin-top: 5rem;
+                    font-size: 1.5rem;
+                }
+
+                h4 {
+                    margin-top: 1.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .main-button-container {
+            position: relative;
+            width: auto;
+
+            .main-button {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+                display: inline-block;
+                background-color: white;
+                border-radius: 15rem;
+                padding: 1rem 0;
+
+                p {
+                    text-align: center;
+                    width: 14rem;
+                    font-size: 1.7rem;
+                    color: $color-one;
+                }
+            }
+        }
+    }
+
+    .login-container {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        min-height: 100vh;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        z-index: 0;
+
+        overflow: scroll;
+
+        .login-contents {
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            max-width: 30rem;
+
+            .login-logo-container {
+                .login-logo {
+                    @include logo-property;
+                }
+            }
+
+            .login-contents-body {
+                position: relative;
+                padding: 0 1.5rem;
+
+                .sign-in-phone {
+                    margin-top: 0.6rem;
+
+                    h2 {
+                        font-size: 1rem;
+                        margin: 0.5rem 0;
+                    }
+
+                    .phone-number {
+                        margin: 1rem 0;
+                    }
+
+                    input[type="number"],
+                    select {
+                        width: 100%;
+                        padding: 1rem 1.1rem;
+                        margin: 0.5rem 0;
+                        display: inline-block;
+                        border: 0.05rem solid $color-gray;
+                        border-radius: 0.6rem;
+                        box-sizing: border-box;
+                        font-size: 1.15rem;
+                        font-weight: lighter;
+                    }
+                }
+
+                @include button-container;
+
+                .go-to-sign-up {
+                    margin: 10vh 0 10vh 0;
+                }
+                .or-line {
+                    @include gray-line;
+                    margin: 2rem 0 1rem 0;
+                    overflow: hidden;
+                }
+
+                .sign-in-alternative {
+                    .continue-method {
+                        position: relative;
+                        line-height: 3;
+                        display: flex;
+                        justify-content: space-between;
+                        border: solid $color-gray 2px;
+                        border-radius: 0.6rem;
+                        margin: 1.5rem 0;
+
+                        .far {
+                            font-size: 2.5rem;
+                        }
+
+                        .far::before {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            margin-left: 6px;
+                        }
+
+                        .fab {
+                            font-size: 2.5rem;
+                        }
+
+                        .fab::before {
+                            margin-left: 6px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        .fa-facebook-square::before {
+                            color: black;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                .no-account-line {
+                    @include gray-line;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .phone-login-container {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        min-height: 100vh;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        z-index: 0;
+        opacity:0;
+        overflow: scroll;
+
+        .phone-login-contents {
+            position: relative;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            max-width: 30rem;
+
+            .phone-login-logo-container {
+                .phone-login-logo {
+                    @include logo-property;
+                }
+            }
+
+            .phone-login-contents-body {
+                letter-spacing: 0.05rem;
+                position: relative;
+                padding: 2.5rem 1.5rem 0 1.5rem;
+
+                .weve-sent {
+                    padding-top: 1rem;
+
+                    h4 {
+                        font-size: 1.2rem;
+                        font-weight: lighter;
+                    }
+    
+                    h5 {
+                        font-size: 1rem;
+                        padding: 0.1rem 0;
+                        font-weight: lighter;
+                    }
+                }
+
+
+
+                .four-digit {
+                    position: relative;
+                    display: flex;
+                    margin-top: 3.8rem;
+                    .digit {
+                        position: relative;
+                        height: 4rem;
+                        width: 4rem;
+                        border-radius: 10px;
+                        border: solid $color-gray thin;
+                        margin: 0 0.25rem;
+
+                        input {
+                            margin: auto;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            font-size: 2rem;
+                            width: 2rem;
+                            height: 2rem;
+                            border: none;
+                            text-align: center;
+                        }
+                    }
+                    .one {
+                        margin: 0 0.25rem 0 0;
+                    }
+                }
+
+                .did-receive{
+                    margin-top:2rem;
+                    
+                    h5{
+                        font-size: 1rem;
+                        padding: 0.1rem 0;
+                        font-weight: lighter;
+                    }
+
+                    span{
+                        font-weight: bold;
+                    }
+                }
+
+                .call-instead{
+                    margin-top:3.5rem;
+                    h5{
+                        font-size: 1rem;
+                        padding: 0.1rem 0;
+                        font-weight: bolder;
+                    }
+                }
+
+                .another-method-line {
+                    @include gray-line;
+                    margin: 4rem 0 1rem 0;
+                    overflow: hidden;
+                }
+
+                @include button-container;
+
+                .back-to-login{
+                    margin: 10vh 0 10vh 0;
+                }
+
+            }
+        }
+    }
+
+    .top-side {
+        transform: translateY(-100%);
+    }
+
+    .bottom-side {
+        transform: translateY(100%);
+    }
+
+    .current {
+        transform: translate(0, 0);
+        z-index: 100;
+        //overflow: scroll !important;
+    }
+
+    .displaynone {
+        display: none;
+    }
+}
