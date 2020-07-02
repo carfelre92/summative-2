@@ -9,6 +9,11 @@ function addBottomRemoveCurrent(a) {
     a.removeClass('current');
 }
 
+let user1 = { email: "admin@admin.com", password: "1234" }
+let user2 = { email: "a@a.com", password: "1234" }
+
+let userList=[user1,user2]
+
 //Jquery
 $(function () {
 
@@ -81,12 +86,45 @@ $(function () {
 
     //email-login to login
     $('.go-to-login').children().on('click', function () {
+        let loginEmail = $('.login-email .email');
+        let loginPassword = $('.login-email .password');
         let loginEmailContainer = $(this).parent().parent().parent().parent();
         let loginContainer = loginEmailContainer.prev().prev();
         removeBottomAddCurrent(loginContainer);
         addBottomRemoveCurrent(loginEmailContainer);
+        loginEmail.val('');
+        loginPassword.val('');
+    })
+
+    //email-login to guest
+    $('.login-to-guest').children().on('click', function () {
+        let loginEmail = $('.login-email .email');
+        let loginPassword = $('.login-email .password');
+        let emailRegex = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/
+        let eResult = emailRegex.test(loginEmail.val())
+
+        loginEmail.on('click', function () {
+            $('.login-email .alert-email').css('display', 'none')
+        })
+        loginPassword.on('click', function () {
+            $('.login-email .alert-password').css('display', 'none')
+        })
+
+        if (loginEmail.val() == '' || eResult == false) {
+            $('.login-email .alert-email').css('display', 'block')
+        }
+
+        if (loginPassword.val() == '') {
+            $('.login-email .alert-password').css('display', 'block')
+        }
+
+        $.each(userList, function(index, item){
+
+            var output = '';
+            output +=item.email;
+            output +=item.password;
+            console.log(output);
+            console.log(index);
+            });
     })
 })
-
-
-
