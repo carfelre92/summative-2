@@ -70,6 +70,8 @@
     color: #049dd9;
   }
   .login-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
     background-color: white;
     position: absolute;
     top: 0;
@@ -79,6 +81,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     z-index: 0;
+    opacity: 0;
     overflow: scroll;
   }
   .login-container .login-contents {
@@ -128,6 +131,12 @@
     font-size: 1.15rem;
     font-weight: lighter;
   }
+  .login-container .login-contents .login-contents-body .alert-message {
+    font-size: 1rem;
+    color: #ff5757;
+    display: none;
+    margin-left: 0.25rem;
+  }
   .login-container .login-contents .login-contents-body .button-container {
     margin: 1rem 0;
   }
@@ -172,6 +181,12 @@
     left: 100% !important;
     width: 500rem !important;
   }
+  .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method-wrap:hover .continue-method {
+    background-color: #ffc107;
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    color: white !important;
+  }
   .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method {
     position: relative;
     line-height: 3;
@@ -206,7 +221,6 @@
             transform: translateY(-50%);
   }
   .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method .fa-facebook-square::before {
-    color: black;
     margin-left: 8px;
   }
   .login-container .login-contents .login-contents-body .no-account-line {
@@ -236,6 +250,8 @@
     width: 500rem !important;
   }
   .phone-login-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
     background-color: white;
     position: absolute;
     top: 0;
@@ -325,7 +341,7 @@
     font-weight: lighter;
   }
   .phone-login-container .phone-login-contents .phone-login-contents-body .did-receive span {
-    font-weight: bold;
+    font-weight: bolder;
   }
   .phone-login-container .phone-login-contents .phone-login-contents-body .call-instead {
     margin-top: 3.5rem;
@@ -379,18 +395,137 @@
   .phone-login-container .phone-login-contents .phone-login-contents-body .back-to-login {
     margin: 10vh 0 10vh 0;
   }
-  .top-side {
+  .login-email-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .login-email-container .login-email-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .login-email-container .login-email-contents .login-email-logo-container .login-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .login-email-container .login-email-contents .login-email-logo-container .login-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .login-email {
+    margin-top: 0.6rem;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .login-email h2 {
+    font-size: 1rem;
+    margin: 1rem 0 0 0;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .login-email .email {
+    margin: 1rem 0;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .login-email input[type="text"],
+  .login-email-container .login-email-contents .login-email-contents-body .login-email select {
+    width: 100%;
+    padding: 0.8rem 1.1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .alert-message {
+    font-size: 1rem;
+    color: #ff5757;
+    display: none;
+    margin-left: 0.25rem;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .login-to-guest {
+    margin: 5vh 0 10vh 0;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .go-to-login {
+    margin: 10vh 0 10vh 0;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .or-line {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    overflow: hidden;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .or-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .or-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .login-email-container .login-email-contents .login-email-contents-body .or-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .top {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  .bottom-side {
+  .bottom {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
   }
   .current {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    z-index: 100;
+    opacity: 1;
+    z-index: 1;
+  }
+  .red-alert-border {
+    border: #ff5757 0.05rem solid !important;
   }
   .displaynone {
     display: none;
