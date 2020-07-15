@@ -301,14 +301,14 @@
     padding: 0.1rem 0;
     font-weight: lighter;
   }
-  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit {
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit-login {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 3.8rem;
   }
-  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit .digit {
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit-login .digit {
     position: relative;
     height: 4rem;
     width: 4rem;
@@ -316,7 +316,7 @@
     border: solid #bebdbd thin;
     margin: 0 0.25rem;
   }
-  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit .digit input {
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit-login .digit input {
     margin: auto;
     position: absolute;
     top: 0;
@@ -329,8 +329,16 @@
     border: none;
     text-align: center;
   }
-  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit .one {
+  .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit-login .one {
     margin: 0 0.25rem 0 0;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .digit-alert-login {
+    display: none;
+  }
+  .phone-login-container .phone-login-contents .phone-login-contents-body .digit-alert-login h4 {
+    padding-top: 1rem;
+    color: red;
+    font-weight: lighter;
   }
   .phone-login-container .phone-login-contents .phone-login-contents-body .did-receive {
     margin-top: 2rem;
@@ -392,7 +400,7 @@
     color: white;
     width: auto;
   }
-  .phone-login-container .phone-login-contents .phone-login-contents-body .back-to-login {
+  .phone-login-container .phone-login-contents .phone-login-contents-body .back-to-login-from-phone-auth {
     margin: 10vh 0 10vh 0;
   }
   .login-email-container {
@@ -509,6 +517,720 @@
     top: 50% !important;
     left: 100% !important;
     width: 500rem !important;
+  }
+  .sign-up-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .sign-up-container .sign-up-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-logo-container .sign-up-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .sign-up-container .sign-up-contents .sign-up-logo-container .sign-up-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-phone {
+    margin-top: 0.6rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-phone h2 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-phone .phone-number {
+    margin: 1rem 0;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-phone input[type="number"],
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-phone select {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .alert-message {
+    font-size: 1rem;
+    color: #ff5757;
+    display: none;
+    margin-left: 0.25rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .go-to-sign-in {
+    margin: 10vh 0 10vh 0;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .or-line {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    overflow: hidden;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .or-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .or-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .or-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method-wrap:hover .continue-method {
+    background-color: #ffc107;
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    color: white !important;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method {
+    position: relative;
+    line-height: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: solid #bebdbd 2px;
+    border-radius: 0.6rem;
+    margin: 1.5rem 0;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method .far {
+    font-size: 2.5rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method .far::before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin-left: 6px;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method .fab {
+    font-size: 2.5rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method .fab::before {
+    margin-left: 6px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method .fa-facebook-square::before {
+    margin-left: 8px;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .no-account-line {
+    text-align: center;
+    overflow: hidden;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .no-account-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .no-account-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .sign-up-container .sign-up-contents .sign-up-contents-body .no-account-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .phone-signup-container .phone-signup-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-logo-container .phone-signup-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-logo-container .phone-signup-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body {
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .weve-sent {
+    padding-top: 1rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .weve-sent h4 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .weve-sent h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3.8rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    border: solid #bebdbd thin;
+    margin: 0 0.25rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit input {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    text-align: center;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .one {
+    margin: 0 0.25rem 0 0;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .digit-alert-signup {
+    display: none;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .digit-alert-signup h4 {
+    padding-top: 1rem;
+    color: red;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .did-receive {
+    margin-top: 2rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .did-receive h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .did-receive span {
+    font-weight: bolder;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .call-instead {
+    margin-top: 3.5rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .call-instead h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: bolder;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line {
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+    overflow: hidden;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .back-to-signup-from-phone-auth {
+    margin: 10vh 0 10vh 0;
+  }
+  .phone-signup-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .phone-signup-container .phone-signup-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-logo-container .phone-signup-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-logo-container .phone-signup-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body {
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .weve-sent {
+    padding-top: 1rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .weve-sent h4 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .weve-sent h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3.8rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 10px;
+    border: solid #bebdbd thin;
+    margin: 0 0.25rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit input {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    text-align: center;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .one {
+    margin: 0 0.25rem 0 0;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .digit-alert-signup {
+    display: none;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .digit-alert-signup h4 {
+    padding-top: 1rem;
+    color: red;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .did-receive {
+    margin-top: 2rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .did-receive h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: lighter;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .did-receive span {
+    font-weight: bolder;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .call-instead {
+    margin-top: 3.5rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .call-instead h5 {
+    font-size: 1rem;
+    padding: 0.1rem 0;
+    font-weight: bolder;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line {
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+    overflow: hidden;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .another-method-line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .phone-signup-container .phone-signup-contents .phone-signup-contents-body .back-to-signup-from-phone-auth {
+    margin: 10vh 0 10vh 0;
+  }
+  .phone-signup-detail-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .alert-message {
+    font-size: 1rem;
+    color: #ff5757;
+    display: none;
+    margin-left: 0.25rem;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body {
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .phone-signup-detail h2 {
+    font-weight: lighter;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .phone-signup-detail .first-name {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem 1.1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 0.05rem solid #bebdbd;
+    border-bottom: 0;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .phone-signup-detail .last-name {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem 1.1rem;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0 0 1rem 1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .line {
+    text-align: center;
+    overflow: hidden;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .phone-signup-detail-container .phone-signup-detail-contents .phone-signup-detail-contents-body .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .email-signup-detail-container {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow: scroll;
+  }
+  .email-signup-detail-container .email-signup-detail-contents {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .alert-message {
+    font-size: 1rem;
+    color: #ff5757;
+    display: none;
+    margin-left: 0.25rem;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body {
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .email-signup-detail h2 {
+    font-weight: lighter;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .email-signup-detail .email {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .email-signup-detail .password {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .email-signup-detail .first-name {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 1rem 1.1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 0.05rem solid #bebdbd;
+    border-bottom: 0;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .email-signup-detail .last-name {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem 1.1rem;
+    display: inline-block;
+    border: 0.05rem solid #bebdbd;
+    border-radius: 0 0 1rem 1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.15rem;
+    font-weight: lighter;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .line {
+    text-align: center;
+    overflow: hidden;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .line span {
+    color: #bebdbd;
+    position: relative;
+    padding: 0 0.7rem;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .line span::before {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    top: 50% !important;
+    right: 100% !important;
+    width: 500rem !important;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .line span::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #bebdbd;
+    margin: 0 0rem;
+    top: 50% !important;
+    left: 100% !important;
+    width: 500rem !important;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .button-container {
+    margin: 1rem 0;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .email-signup-detail-container .email-signup-detail-contents .email-signup-detail-contents-body .button-container .button p {
+    color: white;
+    width: auto;
   }
   .top {
     -webkit-transform: translateY(-100%);
