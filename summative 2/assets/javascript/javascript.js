@@ -9,6 +9,16 @@ function addBottomRemoveCurrent(a) {
     a.removeClass('current');
 }
 
+function removeRightAddCurrent(a) {
+    a.removeClass('right');
+    a.addClass('current');
+}
+
+function addRightRemoveCurrent(a) {
+    a.addClass('right');
+    a.removeClass('current');
+}
+
 var emailExist = false;
 var isPasswordCorrect = false;
 let phoneExist = false;

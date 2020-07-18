@@ -1,8 +1,41 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style-type: none;
   font-family: "Raleway", sans-serif;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+* ::-webkit-scrollbar {
+  display: none;
 }
 
 @media only screen and (max-width: 30rem) {
@@ -1232,6 +1265,234 @@
     color: white;
     width: auto;
   }
+  .logged-in {
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 0;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .logged-in .logged-in-container {
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+  .logged-in .logged-in-container .button-container {
+    margin: 1rem 0;
+  }
+  .logged-in .logged-in-container .button-container .button {
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(30.62%, #049dd9), color-stop(161.07%, white));
+    background-image: linear-gradient(270deg, #049dd9 30.62%, white 161.07%);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem 0;
+  }
+  .logged-in .logged-in-container .button-container .button p {
+    color: white;
+    width: auto;
+  }
+  .logged-in .logged-in-container .logged-in-logo {
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+  }
+  .logged-in .logged-in-container .logged-in-logo img {
+    height: auto;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .logged-in .logged-in-container .guest-number-container {
+    position: relative;
+    padding: 0 1.5rem;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents h4 {
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents h5 {
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-counter-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-counter-container .guest-text {
+    position: relative;
+    text-align: center;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-counter-container .guest-numbers {
+    position: relative;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-counter-container .guest-numbers .fas {
+    border: #bebdbd solid 0.05rem;
+    border-radius: 10rem;
+    padding: 0.65rem;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-counter-container .guest-numbers .fa-minus {
+    color: #bebdbd;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-counter-container .guest-numbers .fa-plus {
+    border: #6c6c6c solid 0.05rem !important;
+    color: #6c6c6c;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-numbers input[type="number"],
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-numbers select {
+    text-align: center;
+    width: 3.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-numbers .number-button {
+    border: solid black thin;
+    width: 3rem;
+  }
+  .logged-in .logged-in-container .button-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .logged-in .logged-in-container .button-bottom .button {
+    margin: 0 1.5rem;
+  }
+  .logged-in .logged-in-container .calendar-contents {
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+  }
+  .logged-in .logged-in-container .calendar-contents .calendar-border {
+    border: 1px solid #f7f7f7 !important;
+    border-radius: 1rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+  }
+  .logged-in .logged-in-container .calendar-contents .calendar-border .calendar-bordertwo {
+    position: relative;
+    height: 3rem;
+  }
+  .logged-in .logged-in-container .calendar-contents .calendar-border .fa-calendar-check {
+    padding-left: 1.5rem;
+  }
+  .logged-in .logged-in-container .calendar-contents .calendar-border .check-date {
+    border: none;
+    border-right: 1px solid #dfdfdf !important;
+    width: 40%;
+  }
+  .logged-in .logged-in-container .calendar-contents .calendar-border .guest-number-display {
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(-13%, 80%);
+            transform: translate(-13%, 80%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    padding-left: 1.5rem;
+  }
+  .logged-in .logged-in-container .calendar-contents .calendar-border .guest-number-display h4 {
+    font-weight: lighter;
+    margin-left: 1.5rem;
+  }
+  .logged-in .logged-in-container .calendar-contents .check-date {
+    width: 40%;
+    height: 3rem;
+    text-align: center;
+  }
+  .logged-in .logged-in-container .back-next-button {
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logged-in .logged-in-container .back-next-button .button-container {
+    margin: 1rem 1.5rem;
+    width: 50%;
+  }
+  .logged-in .logged-in-container .item-container {
+    padding: 0 1.5rem;
+    margin-top: 1rem;
+    display: none;
+    height: auto;
+  }
+  .logged-in .logged-in-container .item-contents {
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-bottom: 10vh;
+  }
+  .logged-in .logged-in-container .item-contents .item {
+    letter-spacing: 0.035rem;
+    min-width: 98%;
+    width: 100%;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border: 1px solid #c7c7c7 !important;
+    border-radius: 1rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+  }
+  .logged-in .logged-in-container .item-contents .item .item-texts {
+    padding-left: 0.5rem;
+  }
+  .logged-in .logged-in-container .item-contents .item .bold-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .logged-in .logged-in-container .item-contents .item h3 {
+    margin: 0, 0.5rem;
+    font-size: 1.5rem;
+  }
+  .logged-in .logged-in-container .item-contents .item h4 {
+    font-weight: lighter;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.2rem;
+  }
+  .logged-in .logged-in-container .item-contents .item img {
+    width: 100%;
+    height: 15rem;
+  }
   .top {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
@@ -1239,6 +1500,10 @@
   .bottom {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
+  }
+  .right {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .current {
     -webkit-transform: translate(0, 0);
