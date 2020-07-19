@@ -38,7 +38,7 @@ input[type="number"] {
   display: none;
 }
 
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 48rem) {
   .app {
     min-height: 100vh;
     position: relative;
@@ -105,7 +105,7 @@ input[type="number"] {
   .login-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -221,6 +221,7 @@ input[type="number"] {
     color: white !important;
   }
   .login-container .login-contents .login-contents-body .sign-in-alternative .continue-method {
+    background-color: white;
     position: relative;
     line-height: 3;
     display: -webkit-box;
@@ -285,7 +286,7 @@ input[type="number"] {
   .phone-login-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -342,6 +343,7 @@ input[type="number"] {
     margin-top: 3.8rem;
   }
   .phone-login-container .phone-login-contents .phone-login-contents-body .four-digit-login .digit {
+    background-color: white;
     position: relative;
     height: 4rem;
     width: 4rem;
@@ -439,7 +441,7 @@ input[type="number"] {
   .login-email-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -554,7 +556,7 @@ input[type="number"] {
   .sign-up-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -670,6 +672,7 @@ input[type="number"] {
     color: white !important;
   }
   .sign-up-container .sign-up-contents .sign-up-contents-body .sign-up-alternative .continue-method {
+    background-color: white;
     position: relative;
     line-height: 3;
     display: -webkit-box;
@@ -734,7 +737,7 @@ input[type="number"] {
   .phone-signup-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -799,6 +802,7 @@ input[type="number"] {
     margin: 0 0.25rem;
   }
   .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit input {
+    background-color: black;
     margin: auto;
     position: absolute;
     top: 0;
@@ -888,7 +892,7 @@ input[type="number"] {
   .phone-signup-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -945,6 +949,7 @@ input[type="number"] {
     margin-top: 3.8rem;
   }
   .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit {
+    background-color: white;
     position: relative;
     height: 4rem;
     width: 4rem;
@@ -953,6 +958,7 @@ input[type="number"] {
     margin: 0 0.25rem;
   }
   .phone-signup-container .phone-signup-contents .phone-signup-contents-body .four-digit-signup .digit input {
+    background-color: white;
     margin: auto;
     position: absolute;
     top: 0;
@@ -1042,7 +1048,7 @@ input[type="number"] {
   .phone-signup-detail-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -1142,7 +1148,7 @@ input[type="number"] {
   .email-signup-detail-container {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -1268,7 +1274,7 @@ input[type="number"] {
   .logged-in {
     -webkit-transition: ease all 0.5s;
     transition: ease all 0.5s;
-    background-color: white;
+    background-color: #f9f9f9;
     position: absolute;
     top: 0;
     min-height: 100vh;
@@ -1359,6 +1365,7 @@ input[type="number"] {
   }
   .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-numbers input[type="number"],
   .logged-in .logged-in-container .guest-number-container .guest-number-contents .guest-counter .guest-numbers select {
+    background-color: #f9f9f9;
     text-align: center;
     width: 3.5rem;
     padding: 1rem;
@@ -1392,6 +1399,7 @@ input[type="number"] {
     border-radius: 1rem;
     -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+    background-color: white;
   }
   .logged-in .logged-in-container .calendar-contents .calendar-border .calendar-bordertwo {
     position: relative;
@@ -1439,12 +1447,11 @@ input[type="number"] {
   }
   .logged-in .logged-in-container .back-next-button .button-container {
     margin: 1rem 1.5rem;
-    width: 50%;
+    width: 100%;
   }
   .logged-in .logged-in-container .item-container {
     padding: 0 1.5rem;
     margin-top: 1rem;
-    display: none;
     height: auto;
   }
   .logged-in .logged-in-container .item-contents {
@@ -1463,6 +1470,8 @@ input[type="number"] {
     margin-bottom: 10vh;
   }
   .logged-in .logged-in-container .item-contents .item {
+    background-color: white;
+    display: none;
     letter-spacing: 0.035rem;
     min-width: 98%;
     width: 100%;
@@ -1473,7 +1482,14 @@ input[type="number"] {
             box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
   }
   .logged-in .logged-in-container .item-contents .item .item-texts {
+    position: relative;
     padding-left: 0.5rem;
+  }
+  .logged-in .logged-in-container .item-contents .item .item-texts .meal-options {
+    margin-right: 0.5rem;
+  }
+  .logged-in .logged-in-container .item-contents .item .item-texts .meal-options .button {
+    padding: 0.5rem;
   }
   .logged-in .logged-in-container .item-contents .item .bold-price {
     font-weight: bold;
@@ -1492,6 +1508,150 @@ input[type="number"] {
   .logged-in .logged-in-container .item-contents .item img {
     width: 100%;
     height: 15rem;
+  }
+  .logged-in .logged-in-container .meal-option-container {
+    position: relative;
+    padding: 1.5rem 0;
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents h4 {
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents h5 {
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-text {
+    width: 50%;
+    position: relative;
+    text-align: center;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers {
+    margin-right: 0.5rem;
+    position: relative;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers input[type="number"],
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers select {
+    background-color: white;
+    text-align: center;
+    width: 3.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 0.6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers .number-button {
+    border: solid black thin;
+    width: 3rem;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers .fas {
+    border: #bebdbd solid 0.05rem;
+    border-radius: 10rem;
+    padding: 0.65rem;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers .fa-minus {
+    color: #bebdbd;
+  }
+  .logged-in .logged-in-container .meal-option-container .meal-option-contents .meal-counter .meal-counter-container .meal-numbers .fa-plus {
+    border: #6c6c6c solid 0.05rem !important;
+    color: #6c6c6c;
+  }
+  .logged-in .logged-in-container .meal-buttons .meal-price {
+    position: absolute;
+    margin-left: 1.5rem;
+    bottom: 6.5rem;
+    margin-top: 4rem;
+  }
+  .logged-in .logged-in-container .meal-buttons .meal-price h2 {
+    font-weight: lighter;
+  }
+  .logged-in .logged-in-container .meal-buttons .button-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logged-in .logged-in-container .meal-buttons .button-bottom .button-container {
+    width: 100%;
+  }
+  .logged-in .logged-in-container .payment-form {
+    -webkit-transform: translateY(35%);
+            transform: translateY(35%);
+    padding: 0 1.5rem;
+  }
+  .logged-in .logged-in-container .payment-form h3 {
+    font-weight: lighter;
+    padding: 0.5rem 0;
+  }
+  .logged-in .logged-in-container .payment-form .card-number {
+    padding-top: 3rem;
+  }
+  .logged-in .logged-in-container .payment-form .text-field {
+    padding-top: 0.5rem;
+  }
+  .logged-in .logged-in-container .payment-form .text-field .input-border {
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+    background-color: white;
+  }
+  .logged-in .logged-in-container .payment-form .text-field input {
+    border: none;
+    padding-left: 1rem;
+  }
+  .logged-in .logged-in-container .payment-form .expire-ccv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logged-in .logged-in-container .payment-form .expire-ccv .expire {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .logged-in .logged-in-container .payment-form .expire-ccv input {
+    width: 3.5rem;
   }
   .top {
     -webkit-transform: translateY(-100%);
@@ -1513,9 +1673,6 @@ input[type="number"] {
   }
   .red-alert-border {
     border: #ff5757 0.05rem solid !important;
-  }
-  .displaynone {
-    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

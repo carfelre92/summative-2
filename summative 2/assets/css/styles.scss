@@ -102,7 +102,7 @@ input[type="number"] {
     }
 }
 
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 48rem) {
     .app {
         min-height: 100vh;
         position: relative;
@@ -171,7 +171,7 @@ input[type="number"] {
 
     .login-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -214,6 +214,7 @@ input[type="number"] {
 
                     input[type="number"],
                     select {
+                        //background-color:rgb(249, 249, 249);
                         width: 100%;
                         padding: 1rem 1.1rem;
                         margin: 0.5rem 0;
@@ -253,6 +254,7 @@ input[type="number"] {
                     }
 
                     .continue-method {
+                        background-color: white;
                         position: relative;
                         line-height: 3;
                         display: flex;
@@ -299,7 +301,7 @@ input[type="number"] {
 
     .phone-login-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -348,6 +350,7 @@ input[type="number"] {
                     display: flex;
                     margin-top: 3.8rem;
                     .digit {
+                        background-color: white;
                         position: relative;
                         height: 4rem;
                         width: 4rem;
@@ -423,7 +426,7 @@ input[type="number"] {
 
     .login-email-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -505,7 +508,7 @@ input[type="number"] {
 
     .sign-up-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -548,6 +551,7 @@ input[type="number"] {
 
                     input[type="number"],
                     select {
+                        //background-color:rgb(249, 249, 249);
                         width: 100%;
                         padding: 1rem 1.1rem;
                         margin: 0.5rem 0;
@@ -587,6 +591,7 @@ input[type="number"] {
                     }
 
                     .continue-method {
+                        background-color: white;
                         position: relative;
                         line-height: 3;
                         display: flex;
@@ -633,7 +638,7 @@ input[type="number"] {
 
     .phone-signup-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -691,6 +696,7 @@ input[type="number"] {
                         margin: 0 0.25rem;
 
                         input {
+                            background-color: black;
                             margin: auto;
                             position: absolute;
                             top: 0;
@@ -758,7 +764,7 @@ input[type="number"] {
 
     .phone-signup-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -808,6 +814,7 @@ input[type="number"] {
                     margin-top: 3.8rem;
 
                     .digit {
+                        background-color: white;
                         position: relative;
                         height: 4rem;
                         width: 4rem;
@@ -816,6 +823,7 @@ input[type="number"] {
                         margin: 0 0.25rem;
 
                         input {
+                            background-color: white;
                             margin: auto;
                             position: absolute;
                             top: 0;
@@ -883,7 +891,7 @@ input[type="number"] {
 
     .phone-signup-detail-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -954,7 +962,7 @@ input[type="number"] {
 
     .email-signup-detail-container {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -1051,7 +1059,7 @@ input[type="number"] {
 
     .logged-in {
         transition: ease all 0.5s;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
         position: absolute;
         top: 0;
         min-height: 100vh;
@@ -1121,6 +1129,7 @@ input[type="number"] {
                         .guest-numbers {
                             input[type="number"],
                             select {
+                                background-color: rgb(249, 249, 249);
                                 text-align: center;
                                 width: 3.5rem;
                                 padding: 1rem;
@@ -1161,36 +1170,31 @@ input[type="number"] {
                     border: 1px solid rgb(247, 247, 247) !important;
                     border-radius: 1rem;
                     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+                    background-color: white;
 
-                    
-                    
-
-                    .calendar-bordertwo{
+                    .calendar-bordertwo {
                         position: relative;
-                        height:3rem;
-
+                        height: 3rem;
                     }
 
                     .fa-calendar-check {
                         padding-left: 1.5rem;
-                        
                     }
 
                     .check-date {
                         border: none;
                         border-right: 1px solid rgb(223, 223, 223) !important;
-                        width:40%;
+                        width: 40%;
                     }
 
                     .guest-number-display {
                         position: absolute;
-                        right:0;
-                        top:0;
-                        transform: translate(-13%,80%);
+                        right: 0;
+                        top: 0;
+                        transform: translate(-13%, 80%);
                         display: flex;
                         text-align: center;
                         padding-left: 1.5rem;
-                        
 
                         h4 {
                             font-weight: lighter;
@@ -1216,14 +1220,14 @@ input[type="number"] {
                 justify-content: space-between;
                 .button-container {
                     margin: 1rem 1.5rem;
-                    width: 50%;
+                    width: 100%;
                 }
             }
 
             .item-container {
                 padding: 0 1.5rem;
                 margin-top: 1rem;
-                display: none;
+                //display: none;
                 height: auto;
             }
 
@@ -1234,9 +1238,11 @@ input[type="number"] {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                margin-bottom:10vh;
+                margin-bottom: 10vh;
 
                 .item {
+                    background-color: white;
+                    display: none;
                     letter-spacing: 0.035rem;
                     min-width: 98%;
                     width: 100%;
@@ -1246,8 +1252,15 @@ input[type="number"] {
                     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
 
                     .item-texts {
-                        //position: relative;
+                        position: relative;
                         padding-left: 0.5rem;
+
+                        .meal-options {
+                            margin-right: 0.5rem;
+                            .button {
+                                padding: 0.5rem;
+                            }
+                        }
                     }
 
                     .bold-price {
@@ -1262,7 +1275,7 @@ input[type="number"] {
                     h4 {
                         font-weight: lighter;
                         padding-top: 0.3rem;
-                        padding-bottom:0.3rem;
+                        padding-bottom: 0.3rem;
                         font-size: 1.2rem;
                     }
 
@@ -1272,6 +1285,155 @@ input[type="number"] {
                     }
                 }
             }
+
+            .meal-option-container {
+                position: relative;
+                padding: 1.5rem 0;
+                margin: 1.5rem 1.5rem 0 1.5rem;
+                background-color: white;
+                border-radius: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+
+                .meal-option-contents {
+                    h1 {
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: lighter;
+                    }
+
+                    h4 {
+                        font-weight: lighter;
+                    }
+                    h5 {
+                        font-weight: lighter;
+                    }
+
+                    .meal-counter {
+                        .meal-counter-container {
+                            display: flex;
+                            position: relative;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .meal-text {
+                                width: 50%;
+                                position: relative;
+                                text-align: center;
+                            }
+                            .meal-numbers {
+                                margin-right: 0.5rem;
+                                position: relative;
+                                input[type="number"],
+                                select {
+                                    background-color: white;
+                                    text-align: center;
+                                    width: 3.5rem;
+                                    padding: 1rem;
+                                    margin: 0.5rem 0;
+                                    border: none;
+                                    border-radius: 0.6rem;
+                                    box-sizing: border-box;
+                                    font-size: 1.5rem;
+                                    font-weight: lighter;
+                                }
+
+                                .number-button {
+                                    border: solid black thin;
+                                    width: 3rem;
+                                }
+
+                                .fas {
+                                    border: $color-gray solid 0.05rem;
+                                    border-radius: 10rem;
+                                    padding: 0.65rem;
+                                }
+                                .fa-minus {
+                                    color: $color-gray;
+                                }
+
+                                .fa-plus {
+                                    border: #6c6c6c solid 0.05rem !important;
+                                    color: #6c6c6c;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .meal-buttons {
+                .meal-price {
+                    position: absolute;
+                    margin-left: 1.5rem;
+                    bottom: 6.5rem;
+                    h2 {
+                        font-weight: lighter;
+                    }
+                    margin-top: 4rem;
+                }
+
+                .button-bottom {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    .button-container {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .payment-form {
+                transform: translateY(35%);
+                padding: 0 1.5rem;
+
+                h3 {
+                    font-weight: lighter;
+                    padding: 0.5rem 0;
+                }
+
+                .card-number{
+                    padding-top:3rem;
+                }
+
+                .text-field {
+                    padding-top: 0.5rem;
+
+                    .input-border {
+                        border-radius: 0.5rem;
+                        width: 100%;
+                        padding: 0.75rem 0;
+                        border: none;
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+                        background-color: white;
+                    }
+
+                    input {
+                        border: none;
+                        padding-left: 1rem;
+                    }
+                }
+
+                .expire-ccv{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .expire{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between; 
+
+                       
+                    }
+
+                    input{
+                        width:3.5rem;
+                    }
+                    
+                }
+                
+            }
+
         }
     }
 
@@ -1295,9 +1457,5 @@ input[type="number"] {
 
     .red-alert-border {
         border: $alert-color 0.05rem solid !important;
-    }
-
-    .displaynone {
-        display: none;
     }
 }

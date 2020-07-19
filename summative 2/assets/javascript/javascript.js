@@ -114,7 +114,7 @@ $(function () {
         if (one != '' && two != '' && three != '' && four != '') {
             console.log('hooray')
             addBottomRemoveCurrent($('.phone-login-container'))
-            removeBottomAddCurrent($('.logged-in'))
+            removeBottomAddCurrent($('.guest-page'))
             $(this).prev().prev().prev().children().val('');
             $(this).prev().prev().children().val('');
             $(this).prev().children().val('');
@@ -256,7 +256,7 @@ $(function () {
 
         if (emailExist == true && isPasswordCorrect == true) {
             console.log('horah')
-            removeBottomAddCurrent($('.logged-in'))
+            removeBottomAddCurrent($('.guest-page'))
             addBottomRemoveCurrent($('.login-email-container'))
             loginEmail.val('');
             loginPassword.val('');
@@ -335,7 +335,7 @@ $(function () {
             console.log('going to guest page')
             phoneUserList.push({ phone: signUpPhoneNum, firstName: firstName.val(), lastName: lastName.val() })
             //console.log(phoneUserList);
-            removeBottomAddCurrent($('.logged-in'))
+            removeBottomAddCurrent($('.guest-pagebackground-color:white;'))
             addBottomRemoveCurrent($('.phone-signup-detail-container'))
         } else {
             $(this).parent().prev().css('display', 'block');
@@ -390,8 +390,16 @@ $(function () {
             signUpEmailFname.val('')
             signUpEmailLname.val('')
             addBottomRemoveCurrent($('.email-signup-detail-container'))
-            removeBottomAddCurrent($('.logged-in'))
+            removeBottomAddCurrent($('.guest-page'))
         }
     })
+
+    //email-signup to signup
+    $('.email-signup-to-signup').children().on('click', function () {
+        addBottomRemoveCurrent($('.email-signup-detail-container'))
+        removeBottomAddCurrent($('.sign-up-container'))
+    })
+
+    
 
 })

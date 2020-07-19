@@ -1,5 +1,5 @@
-let a;
-let b;
+export{lightpick};
+
 
 let lightpick = new Lightpick({
     field: document.querySelector('.check-date'),
@@ -14,16 +14,18 @@ let lightpick = new Lightpick({
     showTooltip: true,
     hotelMode:true,
     minDate: moment(),
+    minDays:2,
     maxDays:15,
     // maxDate: moment().add(15, 'day'),
     onSelect: function (start, end) {
 
         if (end != null && start !=null) {
             let iDays = end.diff(start, 'days');
-            console.log(iDays);
+            //console.log(iDays);
 
             //$('.item-container').css('display', 'block');
         }
-
     }
 })
+
+
